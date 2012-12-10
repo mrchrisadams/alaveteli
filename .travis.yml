@@ -9,7 +9,6 @@ rvm:
   - 1.9.3
 before_install:
   - rvm -v
-  - gem update --system 1.8.10
   - gem update --system 1.8.5
   - gem update --system 1.6.2
   - gem --version
