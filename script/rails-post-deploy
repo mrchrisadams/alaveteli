@@ -67,7 +67,7 @@ then
     with an environment variable.
     *****************************************************************
 
-    END
+	END
     echo "ENV['RAILS_ENV'] ||= 'production'" > config/rails_env.rb
 fi
 
