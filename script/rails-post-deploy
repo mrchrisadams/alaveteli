@@ -74,7 +74,7 @@ fi
 bundle_install_options=""
 if [ "$OPTION_STAGING_SITE" = "0" ]
 then
-    bundle_install_options="--without development:test:develop --deployment"
+    bundle_install_options="--without development test develop --deployment"
 fi
 
 bundle install $bundle_install_options
