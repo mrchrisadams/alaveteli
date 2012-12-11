@@ -128,9 +128,9 @@ class ApplicationController < ActionController::Base
         # :before_filter, but when there's an error, this doesn't
         # happen.  By calling it here, we can ensure error pages are
         # still styled according to the theme.
-        ActionController::Base.before_filters.select{|f| f.to_s =~ /set_view_paths/}.each do |f|
-            self.send(f)
-        end
+        # ActionController::Base.before_filters.select{|f| f.to_s =~ /set_view_paths/}.each do |f|
+        #     self.send(f)
+        # end
         # Make sure expiry time for session is set (before_filters are
         # otherwise missed by this override)
         session_remember_me
