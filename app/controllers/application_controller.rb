@@ -136,7 +136,7 @@ class ApplicationController < ActionController::Base
         session_remember_me
 
         # Make sure the locale is set correctly too
-        set_gettext_locale
+        # set_gettext_locale
 
         case exception
         when ActiveRecord::RecordNotFound, ActionController::UnknownAction, ActionController::RoutingError
