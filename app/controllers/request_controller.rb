@@ -707,6 +707,8 @@ class RequestController < ApplicationController
             key_path = foi_fragment_cache_path(key)
             if foi_fragment_cache_exists?(key_path)
                 logger.info("Reading cache for #{key_path}")
+                puts key_path
+                puts File.directory?(key_path)
                 raise PermissionDenied.new("Directory listing not allowed") if File.directory?(key_path)
                 cached = foi_fragment_cache_read(key_path)
                 response.content_type = AlaveteliFileTypes.filename_to_mimetype(params[:file_name].join("/")) || 'application/octet-stream'
