@@ -133,7 +133,7 @@ class ApplicationController < ActionController::Base
         # end
         # Make sure expiry time for session is set (before_filters are
         # otherwise missed by this override)
-        session_remember_me
+        # session_remember_me
 
         # Make sure the locale is set correctly too
         # set_gettext_locale
