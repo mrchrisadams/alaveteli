@@ -122,6 +122,7 @@ class ApplicationController < ActionController::Base
 
     # Override default error handler, for production sites.
     def rescue_action_in_public(exception)
+
         # Looks for before_filters called something like `set_view_paths_{themename}`. These
         # are set by the themes.
         # Normally, this is called by the theme itself in a
@@ -137,7 +138,8 @@ class ApplicationController < ActionController::Base
 
         # Make sure the locale is set correctly too
         # set_gettext_locale
-
+        puts "rescuing in application_controller"
+        puts exception.backtrace.inspect
         case exception
         when ActiveRecord::RecordNotFound, ActionController::UnknownAction, ActionController::RoutingError
             @status = 404
